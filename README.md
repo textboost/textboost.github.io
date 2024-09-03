@@ -1,6 +1,6 @@
 # TextBoost
 
-This is the repository that contains source code for the [TextBoost website](https://textboost.github.io).
+This is the repository that contains source code for our website [TextBoost website](https://textboost.github.io).
 
 We borrowed the website template from the [Nerfies](https://nerfies.github.io) project page.
 
