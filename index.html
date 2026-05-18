@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="One-shot personalization of text-to-image models via fine-tuning text encoder.">
+  <meta name="description" content="One-shot personalization of text-to-image models via fine-tuning text encoder.">
   <meta name="keywords" content="TextBoost">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TextBoost: Towards One-Shot Personalization of Text-to-Image Models
@@ -23,15 +23,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script> -->
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/tb_fav.png">
 
@@ -41,17 +39,18 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <!-- <div class="navbar-menu">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <!-- <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="https://sites.google.com/view/cvml-kaist">
       <span class="icon">
@@ -59,7 +58,7 @@
       </span>
       </a> -->
 
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
+    <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -77,59 +76,58 @@
             PhotoShape
           </a>
         </div> -->
-      </div>
+    </div>
     </div>
 
-  </div>
-</nav>
+    </div>
+  </nav>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TextBoost: Towards One-Shot Personalization of Text-to-Image Models via Fine-tuning Text Encoder</h1>
-          <div class="is-size-4 publication-authors">
-            <span class="author-block">
-              <a href="https://linkedin.com/in/katynahyeonpark">NaHyeon Park</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://kunheek.github.io">Kunhee Kim</a><sup>*</sup>,</span>
-            <span class="author-block">
-              <a href="https://sites.google.com/view/cvml-kaist/members">Hyunjung Shim</a>
-          </div>
-
-          <div class="is-size-4 publication-authors">
-            <span class="author-block">KAIST</span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">*</sup>equal contribution</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="assets/draft_20240913.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+            <h1 class="title is-1 publication-title">Boosting Text Encoder for Personalized Text-to-Image Generation
+            </h1>
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">
+                <a href="https://linkedin.com/in/katynahyeonpark">NaHyeon Park</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://kunheek.github.io">Kunhee Kim</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/cvml-kaist/members">Hyunjung Shim</a>
+            </div>
+
+            <div class="is-size-4 publication-authors">
+              <span class="author-block">KAIST</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">*</sup>equal contribution</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="assets/tmlr.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2409.08248"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.08248" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -138,18 +136,18 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/nahyeonkaty/textboost"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/nahyeonkaty/textboost"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Code</span>
                   </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -157,132 +155,182 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="textboost teaser">
-  <div class="container is-max-desktop">
-    <div class="qualitative">
+  <section class="textboost teaser">
+    <div class="container is-max-desktop">
+      <div class="qualitative">
         <img src="./static/images/teaser.png">
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">TextBoost</span> enables creative control with a single reference image!
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent breakthroughs in text-to-image models have opened up promising research avenues in personalized image generation, enabling users to create diverse images of a specific subject using natural language prompts. 
-            However, existing methods often suffer from performance degradation when given only a single reference image. They tend to overfit the input, producing highly similar outputs regardless of the text prompt. 
-            This paper addresses the challenge of one-shot personalization by mitigating overfitting, enabling the creation of controllable images through text prompts. 
-            Specifically, we propose a selective fine-tuning strategy that focuses on the text encoder. 
-            Furthermore, we introduce three key techniques to enhance personalization performance: (1) augmentation tokens to encourage feature disentanglement and alleviate overfitting, (2) a knowledge-preservation loss to reduce language drift and promote generalizability across diverse prompts, and (3) SNR-weighted sampling for efficient training. 
-            Extensive experiments demonstrate that our approach efficiently generates high-quality, diverse images using only a single reference image while significantly reducing memory and storage requirements.
-          </p>
-        </div>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">TextBoost</span> enables creative control with a single reference image!
+        </h2>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </section>
 
-    <!-- Paper image. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Our Method</h2>
-        <div class="method-overview">
-          <img src="./static/images/method.png">
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              In this paper, we introduce TextBoost, an efficient one-shot personalization approach for text-to-image
+              diffusion models. Traditional personalization methods typically involve fine-tuning extensive portions of
+              the model, leading to substantial storage requirements and slow convergence. In contrast, we propose
+              selectively fine-tuning only the text encoder, significantly improving computational and storage
+              efficiency. To preserve the original semantic integrity, we develop a novel causality-preserving
+              adaptation mechanism. Additionally, lightweight adapters are employed to locally refine text embeddings
+              immediately before their interaction with cross-attention layers, greatly enhancing the expressiveness of
+              text embeddings with minimal computational overhead. Empirical evaluations across diverse concepts
+              demonstrate that TextBoost achieves faster convergence and substantially reduces storage demands by minimizing
+              the number of trainable parameters. Furthermore, TextBoost maintains comparable subject fidelity, superior text
+              fidelity, and greater generation diversity compared to existing methods. We show that our proposed method
+              offers an efficient, scalable, and practically applicable solution for high-quality text-to-image
+              personalization, particularly beneficial in resource-constrained environments.
+            </p>
+          </div>
         </div>
       </div>
+      <!--/ Abstract. -->
+
+      <!-- Motivation. -->
+      <div class="columns is-centered has-text-centered" style="margin-top: 40px; margin-bottom: 40px;">
+        <div class="column is-full">
+          <h2 class="title is-3">Motivation</h2>
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <div class="method-overview" style="margin-top: 20px; margin-bottom: 20px;">
+                <img src="./static/images/weight_delta.png" alt="Weight Change Motivation">
+              </div>
+            </div>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              Unlike previous methods that predominantly fine-tune the U-Net or the concept token itself, we systematically re-evaluated which parts of the text-to-image diffusion model are most critical for effective personalization. By quantifying parameter changes across layers during full model fine-tuning, we discovered that <b>the text encoder parameters exhibit significantly larger adjustments</b> than the U-Net parameters. This pivotal finding highlights the previously overlooked importance of the text encoder, motivating our approach to exclusively fine-tune the text encoder for efficient and scalable personalization.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Motivation. -->
+
+      <!-- Paper image. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Our Method</h2>
+          
+          <div class="columns is-centered is-vcentered" style="margin-top: 20px;">
+            <div class="column is-7">
+              <div class="method-overview">
+                <img src="./static/images/overview.png" alt="TextBoost Overview">
+                <p style="margin-top: 10px;"><b>TextBoost Overview</b></p>
+              </div>
+            </div>
+            <div class="column is-3">
+              <div class="method-overview">
+                <img src="./static/images/cpa.png" alt="Causality-Preserved Adaptation">
+                <p style="margin-top: 10px;"><b>Causality-Preserved Adaptation</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="content has-text-justified" style="margin-top: 20px;">
+            <p>
+              Unlike traditional personalization methods that update the U-Net, <b>TextBoost</b> selectively fine-tunes only the text encoder for efficient one-shot text-to-image personalization. Additionally, lightweight adapters are employed to locally refine text embeddings immediately before their interaction with cross-attention layers, greatly enhancing their expressiveness with minimal computational overhead.
+            </p>
+            <p>
+              To preserve the original semantic integrity of the pretrained text encoder, we introduce a novel <b>Causality-Preserved Adaptation (CPA)</b> mechanism. This technique ensures that the embeddings of tokens preceding the learned concept token (V*) remain completely unchanged. By preserving the auto-regressive causality up to V*, CPA prevents catastrophic forgetting and preserves the model's original generative capabilities.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!--/ Paper image. -->
     </div>
-    <!--/ Paper image. -->
-  </div>
-</section>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
+  <section class="section">
+    <div class="container is-max-desktop">
 
-    <!-- Matting. -->
-    <div class="column">
-      <h2 class="title is-3">Diverse Image Generation</h2>
-      <div class="columns is-centered">
-        <div class="column content">
-          <p>
-            With the same text prompt, <i>TextBoost</i> generates a variety of images featuring the subject.
-          </p>
-            <img src="./static/images/diverse.png">
-        </div>
-      </div>
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
+      <!-- Matting. -->
       <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Stylization</h2>
-          <p>
-            <i>TextBoost</i> also offers high-quality personalization of style!
-          </p>
-            <img src="./static/images/stylization.png">
+        <h2 class="title is-3">Diverse Image Generation</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              With the same text prompt, <i>TextBoost</i> generates a variety of images featuring the subject.
+            </p>
+            <img src="./static/images/diverse.png">
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">Stylization</h2>
+              <p>
+                <i>TextBoost</i> also offers high-quality personalization of style!
+              </p>
+              <img src="./static/images/stylization.png">
+            </div>
+          </div>
+          <!--/ Visual Effects. -->
+
         </div>
       </div>
-      <!--/ Visual Effects. -->
+      <!--/ Matting. -->
 
-      </div>
+
     </div>
-    <!--/ Matting. -->
+  </section>
 
 
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2024textboost,
-  author    = {Park, NaHyeon and Kim, Kunhee and Shim, Hyunjung},
-  title     = {TextBoost: Towards One-Shot Personalization of Text-to-Image Models via Fine-tuning Text Encoder},
-  journal   = {arXiv preprint arXiv:2409.08248},
-  year      = {2024},
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{park2026textboost,
+  title   = {Boosting Text Encoder for Personalized Text-to-Image Generation},
+  author  = {Park, NaHyeon and Kim, Kunhee and Shim, Hyunjung},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2026},
 }</code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            The website template is borrowed from <a
-            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
-          </p>
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              The website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>
+              project page.
+            </p>
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
